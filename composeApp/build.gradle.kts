@@ -77,10 +77,8 @@ kotlin {
             implementation(libs.ktor.serialization.kotlinx.json) // Corrected
             implementation(libs.kotlinx.serialization.json)
 
-            implementation(libs.mvvm.core)
 
 
-            api("io.github.qdsfdhvh:image-loader:1.10.0")
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
@@ -88,14 +86,24 @@ kotlin {
         jvmMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutinesSwing)
+            implementation("io.ktor:ktor-client-okhttp:3.0.2")
+            implementation(libs.mvvm.core)
+            api("io.github.qdsfdhvh:image-loader:1.10.0")
         }
 
         androidMain.dependencies {
-            implementation(libs.ktor.client.android)
+            implementation(libs.ktor.client.okhttp)
+            implementation(libs.mvvm.core)
+            api("io.github.qdsfdhvh:image-loader:1.10.0")
         }
 
         iosMain.dependencies {
             implementation(libs.ktor.client.darwin)
+            implementation(libs.mvvm.core)
+        }
+
+        wasmJsMain.dependencies {
+            implementation("io.ktor:ktor-client-js:3.0.2")
         }
     }
 }

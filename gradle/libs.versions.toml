@@ -15,7 +15,7 @@ junit = "4.13.2"
 kotlin = "2.2.0"
 kotlinx-coroutines = "1.10.2"
 kotlinxSerializationJson = "1.6.2"
-ktorSerialiationKotlinxJson = "2.3.5"
+ktorSerialiationKotlinxJson = "3.0.2"
 mvvmCore = "0.16.1"
 
 [libraries]
@@ -36,6 +36,7 @@ ktor-client-android = { module = "io.ktor:ktor-client-android", version.ref = "k
 ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktorSerialiationKotlinxJson" }
 ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktorSerialiationKotlinxJson" }
 ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktorSerialiationKotlinxJson" }
+ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktorSerialiationKotlinxJson" }
 ktor-serialiation-kotlinx-json = { module = "io.ktor:ktor-serialiation-kotlinx-json", version.ref = "ktorSerialiationKotlinxJson" }
 ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktorSerialiationKotlinxJson" }
 mvvm-core = { module = "dev.icerock.moko:mvvm-core", version.ref = "mvvmCore" }

@@ -29,7 +29,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import com.seiko.imageloader.rememberImagePainter
+import androidx.compose.foundation.background
+import androidx.compose.ui.graphics.Color
 import data.Product
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
@@ -117,11 +118,11 @@ fun AppContent(homeViewModel: HomeViewModel)
                                 verticalArrangement = Arrangement.Center ,
                                 horizontalAlignment = Alignment.CenterHorizontally
                         ) {
-                            val painter = rememberImagePainter(url = product.image.toString())
-                            val image = Image(
-                                    painter ,
-                                    modifier = Modifier.height(130.dp) ,
-                                    contentDescription = product.title
+                            Spacer(
+                                    modifier = Modifier
+                                        .height(130.dp)
+                                        .fillMaxWidth()
+                                        .background(Color.Gray)
                             )
                             Text(
                                     product.title.toString() ,
